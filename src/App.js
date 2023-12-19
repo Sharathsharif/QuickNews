@@ -8,7 +8,7 @@ function App() {
   let [category,setCategory]= useState([`india`]);
 
 useEffect(() =>{
-  fetch("https://newsapi.org/v2/everything?q=${category}&from=2023-12-10&apiKey=87d13c09ed4a49ea8558575dda12f456")
+  fetch(`https://newsapi.org/v2/everything?q=${category}&from=2023-12-10&apiKey=87d13c09ed4a49ea8558575dda12f456`)
   .then((Response)=>Response.json()  )
   .then((data)=>{
     setArticles (data.articles);
